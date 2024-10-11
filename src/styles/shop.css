@@ -1,0 +1,40 @@
+.shop-wrapper {
+  padding-block: 3rem;
+}
+
+.products__container {
+  margin: var(--margin-content);
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.product {
+  position: relative;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  overflow: hidden;
+  border-radius: 2.5%;
+  box-shadow: 0px 0px 35px -15px rgba(0, 0, 0, 0.8);
+  width: clamp(200px, calc(200px + 250 * ((1200px - 100vw) / 300)), 80%);
+}
+
+.product__title {
+  margin-top: 1rem;
+}
+
+.product__cart {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product__cart::before {
+  position: absolute;
+  content: "🛒";
+  left: 15%;
+}

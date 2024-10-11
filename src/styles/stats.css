@@ -1,0 +1,36 @@
+.stats-wrapper {
+  background-color: var(--color-cyan);
+}
+
+.stats-content {
+  color: var(--color-black);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-block: 3.5rem;
+  padding-inline: 3rem;
+  margin: var(--margin-content);
+}
+
+.stats__card {
+  flex: 1;
+  min-width: 18ch;
+  background-color: var(--color-white);
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  padding-inline: 1rem;
+  align-content: center;
+  text-align: center;
+  line-height: 2;
+  max-width: 80vw;
+}
+
+.stats__quantity {
+  color: var(--color-blue);
+  font-size: calc(2.2rem - 1vw);
+}
+
+.stats__info {
+  text-wrap: nowrap;
+  font-size: calc(2rem - 1vw);
+}

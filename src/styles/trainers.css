@@ -1,0 +1,116 @@
+.trainers-wrapper {
+  background-color: var(--color-cyan);
+  padding-block: 3rem;
+}
+
+.trainers-content {
+  margin: var(--margin-content);
+  padding-block: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.trainers-content img {
+  border: 2px solid var(--color-orange);
+  border-radius: 3%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.trainer__info,
+.trainer__decoration {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}
+
+.trainer__info {
+  bottom: 10%;
+  width: 60%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+}
+
+.trainer__decoration {
+  bottom: 15%;
+  width: 80%;
+  height: 25%;
+}
+
+.trainers-content picture:hover .trainer__info,
+.trainers-content picture:hover .trainer__decoration {
+  opacity: 1;
+  visibility: visible;
+}
+
+.trainers-content picture:active .trainer__info,
+.trainers-content picture:active .trainer__decoration {
+  opacity: 1;
+  visibility: visible;
+}
+
+.trainer__name {
+  text-wrap: nowrap;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.trainer__specialty {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.trainers-content picture {
+  position: relative;
+  width: clamp(240px, calc(200px + 500 * ((900px - 100vw) / 300)), 90%);
+
+  --border-block-begin: 30%;
+  --border-block-end: 70%;
+
+  --border-inline-begin: 30%;
+  --border-inline-end: 70%;
+
+  padding: 12px;
+  background-image: linear-gradient(
+      0deg,
+      transparent var(--border-block-begin),
+      var(--color-blue) var(--border-block-begin),
+      var(--color-blue) var(--border-block-end),
+      transparent 50%
+    ),
+    linear-gradient(
+      90deg,
+      transparent var(--border-inline-begin),
+      var(--color-blue) var(--border-inline-begin),
+      var(--color-blue) var(--border-inline-end),
+      transparent 50%
+    ),
+    linear-gradient(
+      180deg,
+      transparent var(--border-block-begin),
+      var(--color-blue) var(--border-block-begin),
+      var(--color-blue) var(--border-block-end),
+      transparent 50%
+    ),
+    linear-gradient(
+      270deg,
+      transparent var(--border-inline-begin),
+      var(--color-blue) var(--border-inline-begin),
+      var(--color-blue) var(--border-inline-end),
+      transparent 50%
+    );
+  background-size: 20px 100%, 100% 20px, 20px 100%, 100% 20px;
+  background-position: 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+}

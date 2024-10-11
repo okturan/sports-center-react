@@ -1,0 +1,114 @@
+@import url(styles/reset.css);
+@import url(styles/header.css);
+@import url(styles/hero.css);
+@import url(styles/stats.css);
+@import url(styles/classes.css);
+@import url(styles/bmi.css);
+@import url(styles/trainers.css);
+@import url(styles/shop.css);
+@import url(styles/reviews.css);
+@import url(styles/contact.css);
+@import url(styles/footer.css);
+
+:root {
+  --color-black: #212529;
+  --color-gray: #4e4e4e;
+  --color-blue: #355592;
+  --color-white: #fefefe;
+  --color-cyan: #f1f8ff;
+  --color-orange: #f39c13;
+
+  --color-transparent: rgba(0, 0, 0, 0.7);
+
+  --font-size-p: clamp(1rem, (1rem + 0.5vw), 2rem);
+  --font-size-h1: clamp(2rem, (2rem + 3vw), 5rem);
+  --font-size-h2: clamp(1.3rem, (1.3rem + 3vw), 2rem);
+  --font-size-h3: clamp(1rem, (1rem + 3vw), 1.5rem);
+
+  --margin-content: 0 calc(20% - ((-0.005 * 100vw) + 70px));
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--color-gray);
+  text-wrap: balance;
+  scroll-behavior: smooth;
+  scroll-padding: 3rem;
+}
+
+body {
+  position: relative;
+}
+
+
+/* Common */
+.section-header {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.section-header__title {
+  font-size: var(--font-size-h2);
+  color: var(--color-blue);
+  margin-bottom: 2rem;
+}
+
+.section-header__title::after {
+  content: "";
+  display: block;
+  width: 4ch;
+  height: 0.4ch;
+  border-radius: 3px;
+  background-color: var(--color-orange);
+  margin: 10px auto;
+}
+
+.section-header__text {
+  margin-inline: auto;
+  max-width: min(75ch, 60vw);
+}
+
+/* Pills */
+.pill {
+  font-size: var(--font-size-p);
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  width: fit-content;
+  text-align: center;
+  text-wrap: nowrap;
+}
+
+.pill-blue {
+  background-color: var(--color-blue);
+}
+
+.pill-orange {
+  background-color: orange;
+}
+
+.pill-transparent {
+  border: 1px solid var(--color-white);
+  background-color: var(--color-transparent);
+}
+
+.pill-powerfull {
+  padding: 0.1rem 0.8rem;
+}
+
+.pill-lg {
+  padding: 0.6rem 1rem;
+}
+
+.pill-sm {
+  padding: 0.4rem 1rem;
+}
+
+.pill-xs {
+  padding: 0.2rem 0.5rem;
+  font-size: 1.1rem;
+}
