@@ -1,25 +1,28 @@
 import React from "react";
 import SectionHeader from "../SectionHeader";
 import Trainer from "./Trainer";
+import trainer1 from "/src/assets/trainer1.jpg";
+import trainer2 from "/src/assets/trainer2.jpg";
+import trainer3 from "/src/assets/trainer3.jpg";
 
 const Trainers = () => {
   const trainerData = [
     {
       name: "Jane Miller",
       specialty: "Cardio Trainer",
-      image: "/src/assets/trainer1.jpg",
+      image: trainer1,
       alt: "Jane Miller, Cardio Trainer",
     },
     {
       name: "Robert Davis",
       specialty: "Weight Lifter",
-      image: "/src/assets/trainer2.jpg",
+      image: trainer2,
       alt: "Robert Davis, Weight Lifter",
     },
     {
       name: "Melissa Taylor",
       specialty: "Zumba Coach",
-      image: "/src/assets/trainer3.jpg",
+      image: trainer3,
       alt: "Melissa Taylor, Zumba Coach",
     },
   ];

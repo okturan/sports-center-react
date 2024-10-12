@@ -1,6 +1,8 @@
 import React from 'react';
 import SectionHeader from '../SectionHeader';
 import Review from './Review';
+import client1 from '/src/assets/client1.jpg';
+import client2 from '/src/assets/client2.jpg';
 
 const Reviews = () => {
   const reviewData = [
@@ -8,14 +10,14 @@ const Reviews = () => {
       id: 1,
       name: 'Michael Lee',
       title: 'Software Engineer',
-      image: '/src/assets/client1.jpg',
+      image: client1,
       reviewText: "Joining the Sports Center has been the best decision I've made for my health. The trainers are knowledgeable and truly care about your progress.",
     },
     {
       id: 2,
       name: 'Sarah Johnson',
       title: 'Marketing Manager',
-      image: '/src/assets/client2.jpg',
+      image: client2,
       reviewText: "The group classes are fun and challenging. I've met amazing people and achieved goals I never thought possible.",
     },
   ];

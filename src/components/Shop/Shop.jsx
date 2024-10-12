@@ -1,36 +1,42 @@
-import React from 'react';
-import SectionHeader from '../SectionHeader';
-import Product from './Product';
+import React from "react";
+import SectionHeader from "../SectionHeader";
+import Product from "./Product";
+
+// Import images
+import kettlebell5kg from "/src/assets/purchase1.jpg";
+import treadmill from "/src/assets/purchase2.jpg";
+import adjustableDumbbell from "/src/assets/purchase3.jpg";
+import kettlebell3kg from "/src/assets/purchase4.jpg";
 
 const Shop = () => {
   const products = [
     {
       id: 1,
-      title: 'Kettlebell - 5kg',
-      price: '$89.99',
-      image: '/src/assets/purchase1.jpg',
-      alt: '5kg Kettlebell',
+      title: "Kettlebell - 5kg",
+      price: "$89.99",
+      image: kettlebell5kg,
+      alt: "5kg Kettlebell",
     },
     {
       id: 2,
-      title: 'Treadmill',
-      price: '$899.99',
-      image: '/src/assets/purchase2.jpg',
-      alt: 'Treadmill',
+      title: "Treadmill",
+      price: "$899.99",
+      image: treadmill,
+      alt: "Treadmill",
     },
     {
       id: 3,
-      title: 'Adjustable Dumbbell',
-      price: '$129.99',
-      image: '/src/assets/purchase3.jpg',
-      alt: 'Adjustable Dumbbell',
+      title: "Adjustable Dumbbell",
+      price: "$129.99",
+      image: adjustableDumbbell,
+      alt: "Adjustable Dumbbell",
     },
     {
       id: 4,
-      title: 'Kettlebell - 3kg',
-      price: '$69.99',
-      image: '/src/assets/purchase4.jpg',
-      alt: '3kg Kettlebell',
+      title: "Kettlebell - 3kg",
+      price: "$69.99",
+      image: kettlebell3kg,
+      alt: "3kg Kettlebell",
     },
   ];
 
