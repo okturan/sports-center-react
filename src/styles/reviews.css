@@ -43,6 +43,7 @@
 }
 
 .review__text {
+  min-height: 130px;
   position: relative;
   margin-top: 1rem;
   color: var(--color-white);
