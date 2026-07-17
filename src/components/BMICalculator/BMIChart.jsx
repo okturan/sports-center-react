@@ -1,10 +1,18 @@
 import React from "react";
-import bmiImage from "/src/assets/bmi-index.jpg";
+import { BMI_SEGMENTS } from "../../bmi";
 
 const BMIChart = ({ arrowPosition }) => {
   return (
-    <div className="bmi-chart" style={{ "--arrow-position": arrowPosition ? `${arrowPosition}%` : undefined }}>
-      <img src={bmiImage} alt="BMI chart" />
+    <div
+      className="bmi-chart"
+      aria-label="Adult BMI category ranges"
+      style={{ "--arrow-position": arrowPosition === null ? undefined : `${arrowPosition}%` }}>
+      {BMI_SEGMENTS.map(({ label, min, max }) => (
+        <div className="bmi-segment" key={label}>
+          <strong>{label}</strong>
+          <span>{min === 13.5 ? `< ${max}` : max === 45.5 ? `≥ ${min}` : `${min}–<${max}`}</span>
+        </div>
+      ))}
     </div>
   );
 };
