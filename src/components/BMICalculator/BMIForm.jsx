@@ -2,13 +2,15 @@ import React from "react";
 
 const BMIForm = ({ weight, height, setWeight, setHeight, calculateBMI }) => {
   return (
-    <form id="bmiForm">
+    <form id="bmiForm" onSubmit={(event) => event.preventDefault()}>
       <div className="weight">
-        <label htmlFor="weight">Weight (kg):&nbsp;</label>
+        <label htmlFor="weight__input">Weight (kg):&nbsp;</label>
         <input
           type="number"
           id="weight__input"
           name="weight"
+          min="1"
+          step="0.1"
           value={weight}
           onChange={(e) => {
             setWeight(e.target.value);
@@ -18,11 +20,13 @@ const BMIForm = ({ weight, height, setWeight, setHeight, calculateBMI }) => {
         />
       </div>
       <div className="height">
-        <label htmlFor="height">Height (cm):&nbsp;</label>
+        <label htmlFor="height__input">Height (cm):&nbsp;</label>
         <input
           type="number"
           id="height__input"
           name="height"
+          min="1"
+          step="0.1"
           value={height}
           onChange={(e) => {
             setHeight(e.target.value);

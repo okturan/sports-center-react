@@ -2,12 +2,12 @@ import React from 'react';
 
 const BMIResult = ({ bmi, category }) => {
   return (
-    <div id="bmiResult">
+    <div id="bmiResult" aria-live="polite">
       <br />
       {bmi ? (
         <p>Your BMI is <strong>{bmi}</strong>, which is classified as <strong>{category}</strong>.</p>
       ) : (
-        <p>Please enter valid weight and height.</p>
+        <p>Enter weight and height to see a result.</p>
       )}
     </div>
   );
