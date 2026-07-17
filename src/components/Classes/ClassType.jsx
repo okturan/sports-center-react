@@ -2,12 +2,16 @@ import React from 'react';
 
 const ClassType = ({ label, content, isSelected, onClick }) => {
   return (
-    <li
-      className={`pill pill-lg pill-blue ${isSelected ? 'selected' : ''}`}
-      data-content={content}
-      onClick={onClick}
-    >
-      {label}
+    <li>
+      <button
+        type="button"
+        className={`class-type pill pill-lg pill-blue ${isSelected ? 'selected' : ''}`}
+        data-content={content}
+        aria-pressed={isSelected}
+        onClick={onClick}
+      >
+        {label}
+      </button>
     </li>
   );
 };
