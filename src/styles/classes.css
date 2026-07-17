@@ -20,13 +20,24 @@
 }
 
 .classes__types > ul > li {
-  position: relative;
-  padding-inline: 2rem;
-  font-size: var(--font-size-p);
   flex: 1;
   min-width: fit-content;
+}
+
+.class-type {
+  position: relative;
+  width: 100%;
+  padding-inline: 2rem;
+  border: 0;
+  font: inherit;
+  font-size: var(--font-size-p);
   cursor: pointer;
   user-select: none;
+}
+
+.class-type:focus-visible {
+  outline: 3px solid var(--color-orange);
+  outline-offset: 4px;
 }
 
 .selected {
@@ -34,7 +45,7 @@
   box-shadow: 0 0 7px var(--color-orange);
 }
 
-.classes__types > ul > li.selected::after {
+.class-type.selected::after {
   content: "";
   position: absolute;
   bottom: -10px;

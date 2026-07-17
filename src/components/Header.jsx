@@ -52,6 +52,7 @@ const Header = () => {
           className={`nav__hamburger ${menuOpen ? 'open' : ''}`}
           aria-label="Toggle navigation"
           aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
           onClick={handleMenuToggle}
         >
           <span className="hamburger__bar"></span>
@@ -59,7 +60,9 @@ const Header = () => {
           <span className="hamburger__bar"></span>
         </button>
         <nav
+          id="primary-navigation"
           ref={navLinksRef}
+          aria-label="Primary"
           className={`nav__links ${menuOpen ? 'active' : ''}`}
         >
           <ul>
